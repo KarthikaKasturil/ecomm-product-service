@@ -26,8 +26,8 @@ public class MainRestController {
     }
 
     @GetMapping("/{productId}")
-    public Product getInventoryForProductId(@PathVariable String productId) {
-        LOG.info("getInventoryForProductId({})", productId);
+    public Product getProductByProductId(@PathVariable String productId) {
+        LOG.info("getProductByProductId({})", productId);
         return productRepository.findByProductId(productId);
     }
 
